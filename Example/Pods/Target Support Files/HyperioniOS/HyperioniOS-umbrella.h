@@ -15,6 +15,7 @@
 #import "HYPAttributedStringAttributeProvider.h"
 #import "HYPAttributesProvider.h"
 #import "HYPLabelAttributesProvider.h"
+#import "HYPLayerAttributesProvider.h"
 #import "HYPAttributedStringInspectorAttribute.h"
 #import "HYPInspectorAttribute.h"
 #import "HYPKeyValueInspectorAttribute.h"
@@ -44,6 +45,7 @@
 #import "HYPPluginHelper.h"
 #import "HYPPluginMenuItem.h"
 #import "HYPPluginModule.h"
+#import "HYPOverlayPluginModule.h"
 #import "HYPSnapshotInteractionView.h"
 #import "HYPSnapshotPluginModule.h"
 #import "HYPPopoverViewController.h"
@@ -62,6 +64,6 @@
 #import "HYPSlowAnimationsPluginMenuItem.h"
 #import "HYPSlowAnimationsPluginModule.h"
 
-FOUNDATION_EXPORT double HyperioniOSVersionNumber;
-FOUNDATION_EXPORT const unsigned char HyperioniOSVersionString[];
+FOUNDATION_EXPORT double HyperionCoreVersionNumber;
+FOUNDATION_EXPORT const unsigned char HyperionCoreVersionString[];
 

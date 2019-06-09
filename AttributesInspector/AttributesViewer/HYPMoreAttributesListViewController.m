@@ -24,6 +24,7 @@
 #import "HYPKeyValueTableViewCell.h"
 #import "HYPAttributesProvider.h"
 #import "HYPLabelAttributesProvider.h"
+#import "HYPLayerAttributesProvider.h"
 
 @interface HYPAttributesSection : NSObject
 
@@ -164,6 +165,18 @@
 
         currentClass = [currentClass superclass];
     }
+
+    // Add CALayer Attributes
+    HYPLayerAttributesProvider *layerAttributesProvider = [[HYPLayerAttributesProvider alloc] init];
+    NSArray<id<HYPInspectorAttribute>> *layerAttributes = [layerAttributesProvider fullAttributesForView:view];
+    if ([layerAttributes count] == 0)
+    {
+        return attributesSections;
+    }
+
+    NSString *layerSectionName = [layerAttributesProvider attributesSectionName];
+    HYPAttributesSection *calayerAttributesSection = [[HYPAttributesSection alloc] initWithSectionName:layerSectionName attributeRows:layerAttributes];
+    [attributesSections addObject:calayerAttributesSection];
 
     return attributesSections;
 }

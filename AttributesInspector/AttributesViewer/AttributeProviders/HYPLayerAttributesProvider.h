@@ -19,48 +19,10 @@
 //  THE SOFTWARE.
 //
 
-#import "HYPUIHelpers.h"
+#import <Foundation/Foundation.h>
+#import "HYPInspectorAttribute.h"
+#import "HYPAttributesProvider.h"
 
-@implementation HYPUIHelpers
-
-+(NSString *)rgbTextForColor:(UIColor *)color
-{
-    CGFloat red = 0;
-    CGFloat green = 0;
-    CGFloat blue = 0;
-    CGFloat alpha = 0;
-
-    if ([color getRed:&red green:&green blue:&blue alpha:&alpha])
-    {
-
-        return  [NSString stringWithFormat:@"%.0f %.0f %.0f %.1f", round(red * 255), round(green * 255), round(blue * 255), alpha];
-    }
-
-    return nil;
-}
-
-+(NSString * _Nullable)hexTextForColor:(UIColor * _Nullable )color
-{
-    if (color == nil)
-    {
-        return nil;
-    }
-    CGColorRef refColor = color.CGColor;
-    return [HYPUIHelpers hexTextForCGColor:refColor];
-}
-
-+(NSString * _Nullable)hexTextForCGColor:(CGColorRef _Nullable)color {
-    if (color == nil) {
-        return nil;
-    }
-
-    const CGFloat *components = CGColorGetComponents(color);
-    CGFloat r = components[0];
-    CGFloat g = components[1];
-    CGFloat b = components[2];
-    CGFloat a = components[3];
-
-    return [NSString stringWithFormat:@"0x%02lX%02lX%02lX %.1f", lround(r * 255), lround(g * 255), lround(b * 255), a];
-}
+@interface HYPLayerAttributesProvider : NSObject<HYPAttributesProvider>
 
 @end

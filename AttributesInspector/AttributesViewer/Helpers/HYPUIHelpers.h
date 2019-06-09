@@ -26,4 +26,8 @@
 
 +(NSString *)rgbTextForColor:(UIColor *)color;
 
++(NSString *)hexTextForColor:(UIColor *)color;
+
++(NSString * _Nullable)hexTextForCGColor:(CGColorRef _Nullable)color;
+
 @end

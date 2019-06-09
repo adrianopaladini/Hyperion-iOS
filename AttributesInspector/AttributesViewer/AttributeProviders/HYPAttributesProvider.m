@@ -48,13 +48,15 @@
 {
     NSMutableArray<id<HYPInspectorAttribute>> *viewAttributes = [[NSMutableArray alloc] init];
 
-    NSString *backgroundColor = [HYPUIHelpers rgbTextForColor:view.backgroundColor];
-    HYPKeyValueInspectorAttribute *backgroundColorAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Background Color" value:[NSString stringWithFormat:@"RGBA %@", backgroundColor ? backgroundColor : @"--"]];
+    NSString *rgbbackgroundColor = [HYPUIHelpers rgbTextForColor:view.backgroundColor];
+    HYPKeyValueInspectorAttribute *rgbbackgroundColorAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"RGBA Background Color" value:rgbbackgroundColor ? rgbbackgroundColor : @"--"];
+    [viewAttributes addObject:rgbbackgroundColorAttribute];
 
-    [viewAttributes addObject:backgroundColorAttribute];
+    NSString *hexBackgroundColor = [HYPUIHelpers hexTextForColor:view.backgroundColor];
+    HYPKeyValueInspectorAttribute *hexBackgroundColorAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Hex Background Color" value:hexBackgroundColor ? hexBackgroundColor : @"--"];
+    [viewAttributes addObject:hexBackgroundColorAttribute];
 
-    HYPKeyValueInspectorAttribute *relativeFrame = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Relative Frame" value:[NSString stringWithFormat:@"X:%.1f Y:%.1f Width:%.1f Height:%.1f", view.frame.origin.x, view.frame.origin.y, view.frame.size.width, view.frame.size.height]];
-
+    HYPKeyValueInspectorAttribute *relativeFrame = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Relative Frame" value:[NSString stringWithFormat:@"X:%.1f Y:%.1f W:%.1f H:%.1f", view.frame.origin.x, view.frame.origin.y, view.frame.size.width, view.frame.size.height]];
     [viewAttributes addObject:relativeFrame];
 
     HYPKeyValueInspectorAttribute *accessibilityLabelAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Accessibility Label" value:view.accessibilityLabel ? view.accessibilityLabel : @"--"];
@@ -67,8 +69,7 @@
     [viewAttributes addObject:accessibilityHintAttribute];
     
     HYPKeyValueInspectorAttribute *accessibilityIDAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Accessibility ID" value:view.accessibilityIdentifier ? view.accessibilityIdentifier : @"--" ];
-        [viewAttributes addObject:accessibilityIDAttribute];
-
+    [viewAttributes addObject:accessibilityIDAttribute];
 
     return viewAttributes;
 }

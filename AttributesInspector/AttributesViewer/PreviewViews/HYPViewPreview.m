@@ -23,11 +23,14 @@
 #import "HYPUIHelpers.h"
 
 @interface HYPViewPreview()
+
 @property (strong, nonatomic) IBOutlet UILabel *colorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hexColorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *frameLabel;
 @property (nonatomic) UIView *previewTarget;
 @property (strong, nonatomic) IBOutlet UIView *backgroundColorView;
 @property (strong, nonatomic) IBOutlet UILabel *accessibilityTextLabel;
+
 @end
 @implementation HYPViewPreview
 
@@ -50,9 +53,19 @@
         _colorLabel.text = @"--";
     }
 
+    NSString *hexTextColor = [HYPUIHelpers hexTextForColor:view.backgroundColor];
+    if (hexTextColor)
+    {
+        _hexColorLabel.text = [NSString stringWithFormat:@"HEX %@", hexTextColor];
+    }
+    else
+    {
+        _hexColorLabel.text = @"--";
+    }
+
     self.accessibilityTextLabel.text = view.accessibilityLabel ? view.accessibilityLabel : @"--";
 
-    self.frameLabel.text = [NSString stringWithFormat:@"X: %.1f Y: %.1f Width: %.1f Height: %.1f", view.frame.origin.x, view.frame.origin.y, view.frame.size.width, view.frame.size.height];
+    self.frameLabel.text = [NSString stringWithFormat:@"X: %.1f Y: %.1f W: %.1f H: %.1f", view.frame.origin.x, view.frame.origin.y, view.frame.size.width, view.frame.size.height];
 
     return self;
 }

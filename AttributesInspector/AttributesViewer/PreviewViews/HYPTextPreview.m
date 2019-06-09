@@ -30,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *fontNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *sizeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *colorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *hexColorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *lineSpacingLabel;
 @property (strong, nonatomic) IBOutlet UIView *colorCircle;
 @property (strong, nonatomic) IBOutlet UILabel *characterSpacingLabel;
@@ -98,7 +99,7 @@
     _textColor = color;
 
     self.fontNameLabel.text = self.font.fontName ? self.font.fontName : @"--";
-    self.sizeLabel.text = [NSString stringWithFormat: @"%.1f", self.font.pointSize];
+    self.sizeLabel.text = [NSString stringWithFormat: @"%.1fpt", self.font.pointSize];
     self.lineSpacingLabel.text = @"--";
     self.characterSpacingLabel.text = @"--";
 
@@ -112,6 +113,16 @@
     else
     {
         self.colorLabel.text = @"--";
+    }
+
+    NSString *hexColorText = [HYPUIHelpers hexTextForColor:color];
+    if (hexColorText)
+    {
+        self.hexColorLabel.text = [NSString  stringWithFormat:@"HEX %@", hexColorText];
+    }
+    else
+    {
+        self.hexColorLabel.text = @"--";
     }
 }
 

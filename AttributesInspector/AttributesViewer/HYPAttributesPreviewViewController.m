@@ -41,6 +41,7 @@
     self = [super init];
 
     self.selectedView = selectedView;
+    self.title = NSStringFromClass([selectedView class]);
 
     return self;
 }

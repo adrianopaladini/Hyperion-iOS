@@ -21,6 +21,12 @@
 
 #import "HYPPopoverViewController.h"
 
+@interface HYPPopoverViewController()
+
+@property (nonatomic) UILabel *titleLabel;
+
+@end
+
 @implementation HYPPopoverViewController
 
 -(instancetype)initWithViewController:(UIViewController *)controller
@@ -31,9 +37,14 @@
     _arrowPosition = HYPPopoverPointerPositionNone;
     _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightBold];
+
     UIImage *closeImage = [UIImage imageWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:@"x" ofType:@"png"]];
     [_closeButton setImage:closeImage forState:UIControlStateNormal];
     [_closeButton addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+
     return self;
 }
 
@@ -62,6 +73,10 @@
         self.viewController.view.clipsToBounds = true;
     }
 
+    if (self.viewController.title) {
+        self.titleLabel.text = self.viewController.title;
+    }
+
     self.containerView.backgroundColor = [UIColor colorWithRed:115.0/255.0 green:115.0/255.0 blue:115.0/255.0 alpha:1.0];
 
     self.containerView.translatesAutoresizingMaskIntoConstraints = false;
@@ -72,6 +87,7 @@
     [self.containerView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = true;
 
     self.closeButton.translatesAutoresizingMaskIntoConstraints = false;
+    [self.closeButton setContentHuggingPriority:255 forAxis:UILayoutConstraintAxisHorizontal];
     [self.containerView addSubview:self.closeButton];
 
     [self.closeButton.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor].active = true;
@@ -83,6 +99,13 @@
     _closeButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     _closeButton.contentMode = UIViewContentModeCenter;
     _closeButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+
+    self.titleLabel.translatesAutoresizingMaskIntoConstraints = false;
+    [self.containerView addSubview:self.titleLabel];
+
+    [self.titleLabel.centerYAnchor constraintEqualToAnchor:self.closeButton.centerYAnchor].active = true;
+    [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor constant:16].active = true;
+    [self.closeButton.leadingAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor constant:16].active = true;
 
     self.bottomAnchor = [self.containerView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor];
 

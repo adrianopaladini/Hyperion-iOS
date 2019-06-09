@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KxN-Jv-kml">
-                                <rect key="frame" x="69.333333333333329" y="327.33333333333331" width="236.33333333333337" height="107.33333333333331"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxN-Jv-kml">
+                                <rect key="frame" x="62" y="328.66666666666669" width="251" height="105"/>
                                 <string key="text">Welcome to 
 Hyperion</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="45"/>
                                 <color key="textColor" red="0.2901606559753418" green="0.29021644592285156" blue="0.29015710949897766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iS-ef-ybD">
-                                <rect key="frame" x="120.33333333333331" y="449.66666666666669" width="135" height="41"/>
+                                <rect key="frame" x="120" y="448.66666666666669" width="135" height="40.666666666666686"/>
                                 <string key="text">An in-app design 
 inspection tool</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -55,7 +55,7 @@ inspection tool</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-zF-dD9">
-                                <rect key="frame" x="149.66666666666666" y="539.66666666666663" width="75" height="50"/>
+                                <rect key="frame" x="150" y="538.33333333333337" width="75" height="50"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="NextImage-Unselected"/>
                                 <state key="selected" image="NextImage-Selected"/>
@@ -89,6 +89,9 @@ inspection tool</string>
                         <viewLayoutGuide key="safeArea" id="MpQ-Zt-xZj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="O01-Zc-vI4"/>
+                    <connections>
+                        <outlet property="button" destination="YtL-zF-dD9" id="EmR-sg-Oau"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,33 +215,33 @@ inspection tool</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyze animations by slowing them down. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-ih-vvo">
-                                <rect key="frame" x="65" y="542.33333333333337" width="245" height="21.666666666666629"/>
+                                <rect key="frame" x="65" y="521" width="245" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.55673801898956299" green="0.55652600526809692" blue="0.57718861103057861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slow Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rW-F7-Yl4">
-                                <rect key="frame" x="87.666666666666671" y="475.33333333333331" width="199.66666666666663" height="36"/>
+                                <rect key="frame" x="87.666666666666671" y="454" width="199.66666666666663" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.2901606559753418" green="0.29021644592285156" blue="0.29015710949897766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1x" translatesAutoresizingMaskIntoConstraints="NO" id="tuw-16-lTq">
-                                <rect key="frame" x="98" y="311" width="40" height="40"/>
+                                <rect key="frame" x="98.666666666666671" y="311" width="40.000000000000014" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="AnC-WB-heE"/>
                                     <constraint firstAttribute="height" constant="40" id="lBl-rg-O08"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2x" translatesAutoresizingMaskIntoConstraints="NO" id="gxR-iz-TRp" userLabel="2x">
-                                <rect key="frame" x="167" y="311" width="40" height="40"/>
+                                <rect key="frame" x="167.66666666666666" y="311" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="nkl-Gq-4GC"/>
                                     <constraint firstAttribute="width" constant="40" id="zVg-qD-dLX"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3x" translatesAutoresizingMaskIntoConstraints="NO" id="cdH-W1-9aU" userLabel="3x">
-                                <rect key="frame" x="236" y="311" width="40" height="40"/>
+                                <rect key="frame" x="236.66666666666663" y="311" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="F5j-hT-dD3"/>
                                     <constraint firstAttribute="height" constant="40" id="Mrh-6E-mr1"/>
