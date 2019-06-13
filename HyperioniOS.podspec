@@ -43,4 +43,11 @@ Hyperion is an app design review tool that allows you to inspect views and perfo
     measurements.resources = ['Measurements/**/*.png', 'Measurements/**/*.xib', 'Measurements/**/*.plist']
   end
 
+  s.subspec 'NetworkInspector' do |networkinspector|
+    networkinspector.dependency 'HyperioniOS/Core'
+    networkinspector.source_files = 'NetworkInspector/**/*.{h,m}'
+    networkinspector.exclude_files = 'NetworkInspector/**/*.md'
+    networkinspector.resources = ['NetworkInspector/**/*.png', 'NetworkInspector/**/*.xib', 'NetworkInspector/**/*.plist']
+  end
+
 end

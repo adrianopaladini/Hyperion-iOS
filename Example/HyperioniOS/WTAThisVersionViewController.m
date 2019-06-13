@@ -93,11 +93,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self sampleRequest:@"https://reqres.in/api/users?page=2"];
 }
 
 - (IBAction)backButtonPressed:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)sampleRequest:(NSString *)urlString {
+    NSURL *url = [[NSURL alloc]initWithString:urlString];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request addValue:@"Accept" forHTTPHeaderField:@"application/json"];
+    [request addValue:@"Authorization" forHTTPHeaderField:@"Basic YWxhZGRpbjpvcGVuc2VzYW1l"];
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSString *responseStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"Data received: %@", responseStr);
+    }] resume];
+}
 
 @end

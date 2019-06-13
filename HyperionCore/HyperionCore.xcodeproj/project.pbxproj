@@ -151,6 +151,34 @@
 		9D967BDF1FD0F8510035EB8C /* AttributesInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 320E5D801F27991400C42FC0 /* AttributesInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D967BE01FD0F8660035EB8C /* Measurements.h in Headers */ = {isa = PBXBuildFile; fileRef = 320E5D6C1F27988500C42FC0 /* Measurements.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D967BE11FD0F9390035EB8C /* SlowAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 494A74DA1F278EB9003F89F7 /* SlowAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A16D58BD22AD0BD5005E53F8 /* NetworkInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D58BB22AD0BD5005E53F8 /* NetworkInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A16D58D922AD1D64005E53F8 /* HyperionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498E34741EFA0C8000A0BC4E /* HyperionCore.framework */; };
+		A16D593322AD6FB8005E53F8 /* NetworkInspectorPluginModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D591922AD6FB8005E53F8 /* NetworkInspectorPluginModule.m */; };
+		A16D593422AD6FB8005E53F8 /* NetworkTransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16D591B22AD6FB8005E53F8 /* NetworkTransactionCell.xib */; };
+		A16D593522AD6FB8005E53F8 /* NetworkTransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D591C22AD6FB8005E53F8 /* NetworkTransactionDetailViewController.m */; };
+		A16D593622AD6FB8005E53F8 /* NetworkTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D591D22AD6FB8005E53F8 /* NetworkTransactionCell.m */; };
+		A16D593722AD6FB8005E53F8 /* NetworkTransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16D591E22AD6FB8005E53F8 /* NetworkTransactionDetailViewController.xib */; };
+		A16D593822AD6FB8005E53F8 /* NetworkTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D591F22AD6FB8005E53F8 /* NetworkTransactionsViewController.m */; };
+		A16D593922AD6FB8005E53F8 /* NetworkTransactionDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592022AD6FB8005E53F8 /* NetworkTransactionDetailViewController.h */; };
+		A16D593A22AD6FB8005E53F8 /* NetworkTransactionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592122AD6FB8005E53F8 /* NetworkTransactionCell.h */; };
+		A16D593B22AD6FB8005E53F8 /* NetworkTransactionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592222AD6FB8005E53F8 /* NetworkTransactionsViewController.h */; };
+		A16D593C22AD6FB8005E53F8 /* NetworkInspectorPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592322AD6FB8005E53F8 /* NetworkInspectorPlugin.h */; };
+		A16D593D22AD6FB8005E53F8 /* NetworkInspectorPluginModule.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592422AD6FB8005E53F8 /* NetworkInspectorPluginModule.h */; };
+		A16D593E22AD6FB8005E53F8 /* NetworkInspectorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D592522AD6FB8005E53F8 /* NetworkInspectorPlugin.m */; };
+		A16D593F22AD6FB8005E53F8 /* FLEXNetworkCurlLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592722AD6FB8005E53F8 /* FLEXNetworkCurlLogger.h */; };
+		A16D594022AD6FB8005E53F8 /* FLEXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D592822AD6FB8005E53F8 /* FLEXUtility.m */; };
+		A16D594122AD6FB8005E53F8 /* FLEXNetworkTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D592922AD6FB8005E53F8 /* FLEXNetworkTransaction.m */; };
+		A16D594222AD6FB8005E53F8 /* FLEXNetworkRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D592A22AD6FB8005E53F8 /* FLEXNetworkRecorder.m */; };
+		A16D594322AD6FB8005E53F8 /* FLEXNetworkTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592B22AD6FB8005E53F8 /* FLEXNetworkTransaction.h */; };
+		A16D594422AD6FB8005E53F8 /* FLEXUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592C22AD6FB8005E53F8 /* FLEXUtility.h */; };
+		A16D594522AD6FB8005E53F8 /* FLEXNetworkCurlLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D592D22AD6FB8005E53F8 /* FLEXNetworkCurlLogger.m */; };
+		A16D594622AD6FB8005E53F8 /* FLEXNetworkRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D592E22AD6FB8005E53F8 /* FLEXNetworkRecorder.h */; };
+		A16D594722AD6FB8005E53F8 /* FLEXNetworkObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = A16D593022AD6FB8005E53F8 /* FLEXNetworkObserver.h */; };
+		A16D594822AD6FB8005E53F8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A16D593122AD6FB8005E53F8 /* LICENSE */; };
+		A16D594922AD6FB8005E53F8 /* FLEXNetworkObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D593222AD6FB8005E53F8 /* FLEXNetworkObserver.m */; };
+		A1920A2122B140700050A093 /* internet.png in Resources */ = {isa = PBXBuildFile; fileRef = A1920A1E22B1406F0050A093 /* internet.png */; };
+		A1920A2222B140700050A093 /* internet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1920A1F22B1406F0050A093 /* internet@2x.png */; };
+		A1920A2322B140700050A093 /* internet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1920A2022B1406F0050A093 /* internet@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +336,35 @@
 		49D23C941FCDC3840052336F /* 75x-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "75x-Selected@2x.png"; sourceTree = "<group>"; };
 		9DDEB7D61FD78CF8002FC061 /* linkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkButton.png; sourceTree = "<group>"; };
 		9DDEB7D71FD78CF8002FC061 /* linkButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkButton@2x.png"; sourceTree = "<group>"; };
+		A16D58B922AD0BD5005E53F8 /* NetworkInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkInspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16D58BB22AD0BD5005E53F8 /* NetworkInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInspector.h; sourceTree = "<group>"; };
+		A16D58BC22AD0BD5005E53F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16D591922AD6FB8005E53F8 /* NetworkInspectorPluginModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInspectorPluginModule.m; sourceTree = "<group>"; };
+		A16D591B22AD6FB8005E53F8 /* NetworkTransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkTransactionCell.xib; sourceTree = "<group>"; };
+		A16D591C22AD6FB8005E53F8 /* NetworkTransactionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTransactionDetailViewController.m; sourceTree = "<group>"; };
+		A16D591D22AD6FB8005E53F8 /* NetworkTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTransactionCell.m; sourceTree = "<group>"; };
+		A16D591E22AD6FB8005E53F8 /* NetworkTransactionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkTransactionDetailViewController.xib; sourceTree = "<group>"; };
+		A16D591F22AD6FB8005E53F8 /* NetworkTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTransactionsViewController.m; sourceTree = "<group>"; };
+		A16D592022AD6FB8005E53F8 /* NetworkTransactionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTransactionDetailViewController.h; sourceTree = "<group>"; };
+		A16D592122AD6FB8005E53F8 /* NetworkTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTransactionCell.h; sourceTree = "<group>"; };
+		A16D592222AD6FB8005E53F8 /* NetworkTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTransactionsViewController.h; sourceTree = "<group>"; };
+		A16D592322AD6FB8005E53F8 /* NetworkInspectorPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInspectorPlugin.h; sourceTree = "<group>"; };
+		A16D592422AD6FB8005E53F8 /* NetworkInspectorPluginModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInspectorPluginModule.h; sourceTree = "<group>"; };
+		A16D592522AD6FB8005E53F8 /* NetworkInspectorPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInspectorPlugin.m; sourceTree = "<group>"; };
+		A16D592722AD6FB8005E53F8 /* FLEXNetworkCurlLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXNetworkCurlLogger.h; sourceTree = "<group>"; };
+		A16D592822AD6FB8005E53F8 /* FLEXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXUtility.m; sourceTree = "<group>"; };
+		A16D592922AD6FB8005E53F8 /* FLEXNetworkTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXNetworkTransaction.m; sourceTree = "<group>"; };
+		A16D592A22AD6FB8005E53F8 /* FLEXNetworkRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXNetworkRecorder.m; sourceTree = "<group>"; };
+		A16D592B22AD6FB8005E53F8 /* FLEXNetworkTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXNetworkTransaction.h; sourceTree = "<group>"; };
+		A16D592C22AD6FB8005E53F8 /* FLEXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXUtility.h; sourceTree = "<group>"; };
+		A16D592D22AD6FB8005E53F8 /* FLEXNetworkCurlLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXNetworkCurlLogger.m; sourceTree = "<group>"; };
+		A16D592E22AD6FB8005E53F8 /* FLEXNetworkRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXNetworkRecorder.h; sourceTree = "<group>"; };
+		A16D593022AD6FB8005E53F8 /* FLEXNetworkObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXNetworkObserver.h; sourceTree = "<group>"; };
+		A16D593122AD6FB8005E53F8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A16D593222AD6FB8005E53F8 /* FLEXNetworkObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXNetworkObserver.m; sourceTree = "<group>"; };
+		A1920A1E22B1406F0050A093 /* internet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = internet.png; sourceTree = "<group>"; };
+		A1920A1F22B1406F0050A093 /* internet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "internet@2x.png"; sourceTree = "<group>"; };
+		A1920A2022B1406F0050A093 /* internet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "internet@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +396,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16D58B622AD0BD5005E53F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16D58D922AD1D64005E53F8 /* HyperionCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +574,9 @@
 				494A74D91F278EB9003F89F7 /* SlowAnimations */,
 				320E5D6B1F27988500C42FC0 /* Measurements */,
 				320E5D7F1F27991400C42FC0 /* AttributesInspector */,
+				A16D58BA22AD0BD5005E53F8 /* NetworkInspector */,
 				498E34751EFA0C8000A0BC4E /* Products */,
+				A16D58D822AD1D64005E53F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -520,6 +587,7 @@
 				494A74D81F278EB9003F89F7 /* SlowAnimations.framework */,
 				320E5D6A1F27988500C42FC0 /* Measurements.framework */,
 				320E5D7E1F27991400C42FC0 /* AttributesInspector.framework */,
+				A16D58B922AD0BD5005E53F8 /* NetworkInspector.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -717,6 +785,89 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		A16D58BA22AD0BD5005E53F8 /* NetworkInspector */ = {
+			isa = PBXGroup;
+			children = (
+				A16D591822AD6FB8005E53F8 /* NetworkInspector */,
+				A16D58BB22AD0BD5005E53F8 /* NetworkInspector.h */,
+				A16D58BC22AD0BD5005E53F8 /* Info.plist */,
+			);
+			path = NetworkInspector;
+			sourceTree = "<group>";
+		};
+		A16D58D822AD1D64005E53F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A16D591822AD6FB8005E53F8 /* NetworkInspector */ = {
+			isa = PBXGroup;
+			children = (
+				A1920A1B22B13FB10050A093 /* Resources */,
+				A16D591A22AD6FB8005E53F8 /* UI */,
+				A16D592322AD6FB8005E53F8 /* NetworkInspectorPlugin.h */,
+				A16D592522AD6FB8005E53F8 /* NetworkInspectorPlugin.m */,
+				A16D592422AD6FB8005E53F8 /* NetworkInspectorPluginModule.h */,
+				A16D591922AD6FB8005E53F8 /* NetworkInspectorPluginModule.m */,
+				A16D592622AD6FB8005E53F8 /* FLEX */,
+			);
+			name = NetworkInspector;
+			path = ../../NetworkInspector;
+			sourceTree = "<group>";
+		};
+		A16D591A22AD6FB8005E53F8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A16D591B22AD6FB8005E53F8 /* NetworkTransactionCell.xib */,
+				A16D592122AD6FB8005E53F8 /* NetworkTransactionCell.h */,
+				A16D591D22AD6FB8005E53F8 /* NetworkTransactionCell.m */,
+				A16D592222AD6FB8005E53F8 /* NetworkTransactionsViewController.h */,
+				A16D591F22AD6FB8005E53F8 /* NetworkTransactionsViewController.m */,
+				A16D591E22AD6FB8005E53F8 /* NetworkTransactionDetailViewController.xib */,
+				A16D592022AD6FB8005E53F8 /* NetworkTransactionDetailViewController.h */,
+				A16D591C22AD6FB8005E53F8 /* NetworkTransactionDetailViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A16D592622AD6FB8005E53F8 /* FLEX */ = {
+			isa = PBXGroup;
+			children = (
+				A16D592722AD6FB8005E53F8 /* FLEXNetworkCurlLogger.h */,
+				A16D592822AD6FB8005E53F8 /* FLEXUtility.m */,
+				A16D592922AD6FB8005E53F8 /* FLEXNetworkTransaction.m */,
+				A16D592A22AD6FB8005E53F8 /* FLEXNetworkRecorder.m */,
+				A16D592B22AD6FB8005E53F8 /* FLEXNetworkTransaction.h */,
+				A16D592C22AD6FB8005E53F8 /* FLEXUtility.h */,
+				A16D592D22AD6FB8005E53F8 /* FLEXNetworkCurlLogger.m */,
+				A16D592E22AD6FB8005E53F8 /* FLEXNetworkRecorder.h */,
+				A16D592F22AD6FB8005E53F8 /* PonyDebugger */,
+			);
+			path = FLEX;
+			sourceTree = "<group>";
+		};
+		A16D592F22AD6FB8005E53F8 /* PonyDebugger */ = {
+			isa = PBXGroup;
+			children = (
+				A16D593022AD6FB8005E53F8 /* FLEXNetworkObserver.h */,
+				A16D593122AD6FB8005E53F8 /* LICENSE */,
+				A16D593222AD6FB8005E53F8 /* FLEXNetworkObserver.m */,
+			);
+			path = PonyDebugger;
+			sourceTree = "<group>";
+		};
+		A1920A1B22B13FB10050A093 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1920A1E22B1406F0050A093 /* internet.png */,
+				A1920A1F22B1406F0050A093 /* internet@2x.png */,
+				A1920A2022B1406F0050A093 /* internet@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -802,6 +953,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A16D58B422AD0BD5005E53F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16D593C22AD6FB8005E53F8 /* NetworkInspectorPlugin.h in Headers */,
+				A16D593922AD6FB8005E53F8 /* NetworkTransactionDetailViewController.h in Headers */,
+				A16D594622AD6FB8005E53F8 /* FLEXNetworkRecorder.h in Headers */,
+				A16D593D22AD6FB8005E53F8 /* NetworkInspectorPluginModule.h in Headers */,
+				A16D594422AD6FB8005E53F8 /* FLEXUtility.h in Headers */,
+				A16D58BD22AD0BD5005E53F8 /* NetworkInspector.h in Headers */,
+				A16D593A22AD6FB8005E53F8 /* NetworkTransactionCell.h in Headers */,
+				A16D594322AD6FB8005E53F8 /* FLEXNetworkTransaction.h in Headers */,
+				A16D593B22AD6FB8005E53F8 /* NetworkTransactionsViewController.h in Headers */,
+				A16D594722AD6FB8005E53F8 /* FLEXNetworkObserver.h in Headers */,
+				A16D593F22AD6FB8005E53F8 /* FLEXNetworkCurlLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -877,6 +1046,24 @@
 			productReference = 498E34741EFA0C8000A0BC4E /* HyperionCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A16D58B822AD0BD5005E53F8 /* NetworkInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16D58BE22AD0BD5005E53F8 /* Build configuration list for PBXNativeTarget "NetworkInspector" */;
+			buildPhases = (
+				A16D58B422AD0BD5005E53F8 /* Headers */,
+				A16D58B522AD0BD5005E53F8 /* Sources */,
+				A16D58B622AD0BD5005E53F8 /* Frameworks */,
+				A16D58B722AD0BD5005E53F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkInspector;
+			productName = NetworkInspector;
+			productReference = A16D58B922AD0BD5005E53F8 /* NetworkInspector.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -902,6 +1089,10 @@
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
+					A16D58B822AD0BD5005E53F8 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 498E346E1EFA0C8000A0BC4E /* Build configuration list for PBXProject "HyperionCore" */;
@@ -909,6 +1100,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 498E346A1EFA0C8000A0BC4E;
@@ -920,6 +1112,7 @@
 				494A74D71F278EB9003F89F7 /* SlowAnimations */,
 				320E5D691F27988500C42FC0 /* Measurements */,
 				320E5D7D1F27991400C42FC0 /* AttributesInspector */,
+				A16D58B822AD0BD5005E53F8 /* NetworkInspector */,
 			);
 		};
 /* End PBXProject section */
@@ -996,6 +1189,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A16D58B722AD0BD5005E53F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1920A2322B140700050A093 /* internet@3x.png in Resources */,
+				A1920A2122B140700050A093 /* internet.png in Resources */,
+				A16D594822AD6FB8005E53F8 /* LICENSE in Resources */,
+				A16D593422AD6FB8005E53F8 /* NetworkTransactionCell.xib in Resources */,
+				A16D593722AD6FB8005E53F8 /* NetworkTransactionDetailViewController.xib in Resources */,
+				A1920A2222B140700050A093 /* internet@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1068,6 +1274,23 @@
 				498E34EB1EFA0D5700A0BC4E /* HYPSnapshotInteractionView.m in Sources */,
 				49873CC81FC2513500BBA3C1 /* HYPConfigurationConstants.m in Sources */,
 				493DCABF1F01FBB800EB5007 /* HYPOverlayDebuggingWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16D58B522AD0BD5005E53F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16D594122AD6FB8005E53F8 /* FLEXNetworkTransaction.m in Sources */,
+				A16D594922AD6FB8005E53F8 /* FLEXNetworkObserver.m in Sources */,
+				A16D593E22AD6FB8005E53F8 /* NetworkInspectorPlugin.m in Sources */,
+				A16D594522AD6FB8005E53F8 /* FLEXNetworkCurlLogger.m in Sources */,
+				A16D593822AD6FB8005E53F8 /* NetworkTransactionsViewController.m in Sources */,
+				A16D593622AD6FB8005E53F8 /* NetworkTransactionCell.m in Sources */,
+				A16D594022AD6FB8005E53F8 /* FLEXUtility.m in Sources */,
+				A16D593322AD6FB8005E53F8 /* NetworkInspectorPluginModule.m in Sources */,
+				A16D593522AD6FB8005E53F8 /* NetworkTransactionDetailViewController.m in Sources */,
+				A16D594222AD6FB8005E53F8 /* FLEXNetworkRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,6 +1559,61 @@
 			};
 			name = Release;
 		};
+		A16D58BF22AD0BD5005E53F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NetworkInspector/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WillowTree.NetworkInspector;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A16D58C022AD0BD5005E53F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NetworkInspector/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WillowTree.NetworkInspector;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1380,6 +1658,15 @@
 			buildConfigurations = (
 				498E347D1EFA0C8000A0BC4E /* Debug */,
 				498E347E1EFA0C8000A0BC4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A16D58BE22AD0BD5005E53F8 /* Build configuration list for PBXNativeTarget "NetworkInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16D58BF22AD0BD5005E53F8 /* Debug */,
+				A16D58C022AD0BD5005E53F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

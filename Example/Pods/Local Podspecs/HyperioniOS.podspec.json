@@ -10,7 +10,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "chrsmys": "chris.mays@willowtreeapps.com"
+    "WillowTree": "opensource@willowtreeapps.com"
   },
   "source": {
     "git": "https://github.com/willowtreeapps/Hyperion-iOS.git",
@@ -76,6 +76,21 @@
         "Measurements/**/*.png",
         "Measurements/**/*.xib",
         "Measurements/**/*.plist"
+      ]
+    },
+    {
+      "name": "NetworkInspector",
+      "dependencies": {
+        "HyperioniOS/Core": [
+
+        ]
+      },
+      "source_files": "NetworkInspector/**/*.{h,m}",
+      "exclude_files": "NetworkInspector/**/*.md",
+      "resources": [
+        "NetworkInspector/**/*.png",
+        "NetworkInspector/**/*.xib",
+        "NetworkInspector/**/*.plist"
       ]
     }
   ]
