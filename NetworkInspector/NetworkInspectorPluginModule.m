@@ -26,7 +26,12 @@
     self = [super initWithExtension:extension];
     if (self) {
         NetworkTransactionsViewController *viewController = [[NetworkTransactionsViewController alloc] init];
+        
         navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
+        viewController.navigationItem.rightBarButtonItem = doneBarButton;
+        viewController.navigationItem.title = [self pluginMenuItemTitle];
+        
         [FLEXNetworkObserver setEnabled:YES];
     }
     
@@ -79,10 +84,26 @@
 
 - (void)activateOverlayPluginViewWithContext:(nonnull UIView *)context {
     [super activateOverlayPluginViewWithContext:context];
+    UIViewController *root = self.extension.attachedWindow.rootViewController;
+    [[self topViewController:root] presentViewController:navigationController animated:YES completion:NULL];
 }
 
 - (void)deactivateOverlayPluginView {
     [_pluginMenuItem setSelected:NO animated:YES];
+    [navigationController dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark -
+- (UIViewController *)topViewController:(UIViewController *)baseViewController {
+    UIViewController *presentedViewController = [baseViewController presentedViewController];
+    if (presentedViewController) {
+        return [self topViewController:presentedViewController];
+    }
+    return baseViewController;
+}
+
+- (void)done {
+    self.extension.overlayContainer.overlayModule = nil;
 }
 
 @end

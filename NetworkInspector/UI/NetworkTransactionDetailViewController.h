@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NetworkTransactionDetailViewController : UIViewController
+@interface NetworkTransactionDetailViewController : UITableViewController
 
 - (instancetype)initWithTransaction:(FLEXNetworkTransaction *)transaction;
 

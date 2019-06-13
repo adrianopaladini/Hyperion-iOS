@@ -43,13 +43,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.clearsSelectionOnViewWillAppear = NO;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self configureTableView];
     [self updateTransactions];
 }
 
 - (void)configureTableView {
+    self.clearsSelectionOnViewWillAppear = YES;
+    
     NSBundle *bundle = [NSBundle bundleForClass:self.class];
     UINib *nib = [UINib nibWithNibName:NSStringFromClass(NetworkTransactionCell.class) bundle:bundle];
     [self.tableView registerNib:nib forCellReuseIdentifier:NSStringFromClass(NetworkTransactionCell.class)];
@@ -59,10 +59,6 @@
 
 - (void)updateTransactions {
     self.networkTransactions = [[FLEXNetworkRecorder defaultRecorder] networkTransactions];
-}
-
-- (void)done {
-    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - UITableViewDataSource
