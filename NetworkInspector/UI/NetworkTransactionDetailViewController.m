@@ -63,10 +63,10 @@ FLEXNetworkTransaction *_transaction;
     [components addObject:[self overviewSectionFrom:transaction]];
     [headers addObject:@"Overview"];
     
-    NSDictionary *transactionHeader = [self headerFrom:transaction.request];
+    NSDictionary *transactionHeader = transaction.request.allHTTPHeaderFields;
     if (transactionHeader) {
         [components addObject:transactionHeader];
-        [headers addObject:@"Header"];
+        [headers addObject:@"Request  eader"];
     }
     
     NSString *requestJSON = [self requestJSONFrom:transaction];
@@ -87,6 +87,9 @@ FLEXNetworkTransaction *_transaction;
 
 - (NSDictionary<NSString *, NSString *> * _Nonnull )overviewSectionFrom:(FLEXNetworkTransaction *)transaction {
     NSString *httpResponseCode = [FLEXUtility statusCodeStringFromURLResponse:transaction.response];
+    if ([httpResponseCode isEqual:[NSNull null]] || httpResponseCode == nil) {
+        httpResponseCode = @"";
+    }
     NSString *sentDate = [NSDateFormatter localizedStringFromDate:transaction.startTime dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
     NSString *totalDuration = [FLEXUtility stringFromRequestDuration:transaction.duration];
     
@@ -97,14 +100,6 @@ FLEXNetworkTransaction *_transaction;
              @"Request ID": transaction.requestID,
              @"Duration": totalDuration
              };
-}
-
-- (NSDictionary<NSString *, NSString *> * _Nullable )headerFrom:(NSURLRequest *)request {
-    NSDictionary *allHTTPHeaderFields = request.allHTTPHeaderFields;
-    if (allHTTPHeaderFields) {
-        return [[NSDictionary alloc] initWithObjects:allHTTPHeaderFields.allKeys forKeys:allHTTPHeaderFields.allValues];
-    }
-    return NULL;
 }
 
 - (NSString * _Nullable )requestJSONFrom:(FLEXNetworkTransaction *)transaction {
@@ -197,13 +192,17 @@ FLEXNetworkTransaction *_transaction;
     
     NSError *error;
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    NSData *prettyJSONData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:&error];
-    NSString *prettyPrintedString = [[NSString alloc] initWithData:prettyJSONData encoding:NSUTF8StringEncoding];
-    
-    if (error) {
-        return NULL;
+    if (jsonObject) {
+        NSData *prettyJSONData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:&error];
+        NSString *prettyPrintedString = [[NSString alloc] initWithData:prettyJSONData encoding:NSUTF8StringEncoding];
+
+        if (error) {
+            return NULL;
+        }
+        return prettyPrintedString;
+    } else {
+        return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     }
-    return prettyPrintedString;
 }
 
 @end
