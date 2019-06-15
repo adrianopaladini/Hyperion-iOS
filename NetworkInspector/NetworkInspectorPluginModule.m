@@ -29,7 +29,11 @@
         
         navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
         UIBarButtonItem *doneBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
-        viewController.navigationItem.rightBarButtonItem = doneBarButton;
+        viewController.navigationItem.leftBarButtonItem = doneBarButton;
+        
+        UIBarButtonItem *settingsBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(showSettings)];
+        viewController.navigationItem.rightBarButtonItem = settingsBarButton;
+        
         viewController.navigationItem.title = [self pluginMenuItemTitle];
         
         [FLEXNetworkObserver setEnabled:YES];
@@ -104,6 +108,10 @@
 
 - (void)done {
     self.extension.overlayContainer.overlayModule = nil;
+}
+
+- (void)showSettings {
+    
 }
 
 @end

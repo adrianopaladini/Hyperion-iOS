@@ -103,8 +103,8 @@
 - (void)sampleRequest:(NSString *)urlString {
     NSURL *url = [[NSURL alloc]initWithString:urlString];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request addValue:@"Accept" forHTTPHeaderField:@"application/json"];
-    [request addValue:@"Authorization" forHTTPHeaderField:@"Basic YWxhZGRpbjpvcGVuc2VzYW1l"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request addValue:@"Basic YWxhZGRpbjpvcGVuc2VzYW1l" forHTTPHeaderField:@"Authorization"];
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSString *responseStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSLog(@"Data received: %@", responseStr);

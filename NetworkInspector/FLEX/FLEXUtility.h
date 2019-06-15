@@ -21,25 +21,6 @@
 #endif
 
 @interface FLEXUtility : NSObject
-
-+ (UIColor *)consistentRandomColorForObject:(id)object;
-+ (NSString *)descriptionForView:(UIView *)view includingFrame:(BOOL)includeFrame;
-+ (NSString *)stringForCGRect:(CGRect)rect;
-+ (UIViewController *)viewControllerForView:(UIView *)view;
-+ (UIViewController *)viewControllerForAncestralView:(UIView *)view;
-+ (NSString *)detailDescriptionForView:(UIView *)view;
-+ (UIImage *)circularImageWithColor:(UIColor *)color radius:(CGFloat)radius;
-+ (UIColor *)scrollViewGrayColor;
-+ (UIColor *)hierarchyIndentPatternColor;
-+ (NSString *)applicationImageName;
-+ (NSString *)applicationName;
-+ (NSString *)safeDescriptionForObject:(id)object;
-+ (NSString *)addressOfObject:(id)object;
-+ (UIFont *)defaultFontOfSize:(CGFloat)size;
-+ (UIFont *)defaultTableViewCellLabelFont;
-+ (NSString *)stringByEscapingHTMLEntitiesInString:(NSString *)originalString;
-+ (UIInterfaceOrientationMask)infoPlistSupportedInterfaceOrientationsMask;
-+ (NSString *)searchBarPlaceholderText;
 + (UIImage *)thumbnailedImageWithMaxPixelDimension:(NSInteger)dimension fromImageData:(NSData *)data;
 + (NSString *)stringFromRequestDuration:(NSTimeInterval)duration;
 + (NSString *)statusCodeStringFromURLResponse:(NSURLResponse *)response;
@@ -47,11 +28,6 @@
 + (NSDictionary<NSString *, id> *)dictionaryFromQuery:(NSString *)query;
 + (NSString *)prettyJSONStringFromData:(NSData *)data;
 + (BOOL)isValidJSONData:(NSData *)data;
-+ (NSData *)inflatedDataFromCompressedData:(NSData *)compressedData;
-
-+ (NSArray<UIWindow *> *)allWindows;
-
-+ (void)alert:(NSString *)title message:(NSString *)message from:(UIViewController *)viewController;
 
 // Swizzling utilities
 

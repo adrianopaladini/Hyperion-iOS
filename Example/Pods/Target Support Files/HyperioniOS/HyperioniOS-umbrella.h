@@ -70,6 +70,7 @@
 #import "NetworkTransactionCell.h"
 #import "NetworkTransactionDetailViewController.h"
 #import "NetworkTransactionsViewController.h"
+#import "TransactionDetailCell.h"
 #import "HYPSlowAnimationsPlugin.h"
 #import "HYPSlowAnimationsPluginMenuItem.h"
 #import "HYPSlowAnimationsPluginModule.h"
