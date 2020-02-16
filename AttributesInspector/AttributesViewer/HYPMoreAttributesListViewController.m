@@ -25,6 +25,7 @@
 #import "HYPAttributesProvider.h"
 #import "HYPLabelAttributesProvider.h"
 #import "HYPLayerAttributesProvider.h"
+#import "HYPImageViewAttributesProvider.h"
 
 @interface HYPAttributesSection : NSObject
 
@@ -184,7 +185,7 @@
 -(NSDictionary<NSString *, id<HYPAttributesProvider>> *)getAttributesProvidersDictionary
 {
 
-    NSArray *attributesProvidersArray = @[[[HYPAttributesProvider alloc] init], [[HYPLabelAttributesProvider alloc] init]];
+    NSArray *attributesProvidersArray = @[[[HYPAttributesProvider alloc] init], [[HYPLabelAttributesProvider alloc] init], [[HYPImageViewAttributesProvider alloc] init]];
 
     NSMutableDictionary<NSString *, id<HYPAttributesProvider>> *attributesProvidersDictionary = [[NSMutableDictionary alloc] init];
 

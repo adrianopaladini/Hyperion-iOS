@@ -14,6 +14,7 @@
 #import "HYPKeyValueTableViewCell.h"
 #import "HYPAttributedStringAttributeProvider.h"
 #import "HYPAttributesProvider.h"
+#import "HYPImageViewAttributesProvider.h"
 #import "HYPLabelAttributesProvider.h"
 #import "HYPLayerAttributesProvider.h"
 #import "HYPAttributedStringInspectorAttribute.h"

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C11F7BD20506ABB005A7081 /* HYPOverlayPluginModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C11F7BB20506ABB005A7081 /* HYPOverlayPluginModule.m */; };
 		1C11F7BE20506ABB005A7081 /* HYPOverlayPluginModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C11F7BC20506ABB005A7081 /* HYPOverlayPluginModule.h */; };
+		204DD7C923F93F2A00A39822 /* HYPImageViewAttributesProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */; };
+		204DD7CA23F93F2A00A39822 /* HYPImageViewAttributesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */; };
 		32EA53471F27DA300012DFB6 /* HyperionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498E34741EFA0C8000A0BC4E /* HyperionCore.framework */; };
 		32EA53481F27DA340012DFB6 /* HyperionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498E34741EFA0C8000A0BC4E /* HyperionCore.framework */; };
 		32EA53631F27E10F0012DFB6 /* HYPMeasurementsInteractionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 498E351E1EFA20CF00A0BC4E /* HYPMeasurementsInteractionView.h */; };
@@ -156,6 +158,8 @@
 /* Begin PBXFileReference section */
 		1C11F7BB20506ABB005A7081 /* HYPOverlayPluginModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPOverlayPluginModule.m; sourceTree = "<group>"; };
 		1C11F7BC20506ABB005A7081 /* HYPOverlayPluginModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPOverlayPluginModule.h; sourceTree = "<group>"; };
+		204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPImageViewAttributesProvider.h; sourceTree = "<group>"; };
+		204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPImageViewAttributesProvider.m; sourceTree = "<group>"; };
 		320E5D6A1F27988500C42FC0 /* Measurements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Measurements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		320E5D6C1F27988500C42FC0 /* Measurements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Measurements.h; sourceTree = "<group>"; };
 		320E5D6D1F27988500C42FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 				493044CF1FD0B85500731401 /* HYPAttributesProvider.m */,
 				49CFFF721FD0D5A600B9E33A /* HYPLabelAttributesProvider.h */,
 				49CFFF731FD0D5A600B9E33A /* HYPLabelAttributesProvider.m */,
+				204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */,
+				204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */,
 				49CD4DEE1FD11AEE004769CF /* HYPAttributedStringAttributeProvider.h */,
 				49CD4DEF1FD11AEE004769CF /* HYPAttributedStringAttributeProvider.m */,
 			);
@@ -737,6 +743,7 @@
 			files = (
 				9D967BDF1FD0F8510035EB8C /* AttributesInspector.h in Headers */,
 				49CD4DEB1FD11046004769CF /* HYPKeyValueTableViewCell.h in Headers */,
+				204DD7C923F93F2A00A39822 /* HYPImageViewAttributesProvider.h in Headers */,
 				494CC1FA1FCFA15D007EB9B4 /* HYPInspectorAttribute.h in Headers */,
 				49CD4DF81FD11CF9004769CF /* HYPAttributedStringInspectorAttribute.h in Headers */,
 				49CFFF7F1FD0F8AD00B9E33A /* HYPUIHelpers.h in Headers */,
@@ -909,6 +916,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 498E346A1EFA0C8000A0BC4E;
@@ -1021,6 +1029,7 @@
 				32EA53761F27E1220012DFB6 /* HYPAttributeInspectorInteractionView.m in Sources */,
 				493044D11FD0B85500731401 /* HYPAttributesProvider.m in Sources */,
 				49CD4DE31FD10B5E004769CF /* HYPMoreAttributesListViewController.m in Sources */,
+				204DD7CA23F93F2A00A39822 /* HYPImageViewAttributesProvider.m in Sources */,
 				49CFFF801FD0F8AD00B9E33A /* HYPUIHelpers.m in Sources */,
 				49CD4DF11FD11AEE004769CF /* HYPAttributedStringAttributeProvider.m in Sources */,
 				49CD4DEC1FD11046004769CF /* HYPKeyValueTableViewCell.m in Sources */,

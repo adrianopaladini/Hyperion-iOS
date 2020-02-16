@@ -44,6 +44,12 @@
 
     [viewAttributes addObjectsFromArray:[attributedProvider attributesForAttributedString:label.attributedText]];
 
+    HYPKeyValueInspectorAttribute *alignAttrubute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Align" value:[self textAlignmentDescription:label.textAlignment]];
+    [viewAttributes addObject:alignAttrubute];
+
+    HYPKeyValueInspectorAttribute *lineBreakModeAttrubute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Line Break Mode" value:[self lineBreakModeDescription:label.lineBreakMode]];
+    [viewAttributes addObject:lineBreakModeAttrubute];
+
     return viewAttributes;
 }
 
@@ -64,6 +70,51 @@
 - (Class)providerClass
 {
     return [UILabel class];
+}
+
+// MARK: - Attributes
+
+- (NSString *)textAlignmentDescription:(NSTextAlignment)textAlignment {
+    switch (textAlignment) {
+        case NSTextAlignmentLeft:
+            return @"Left";
+            break;
+        case NSTextAlignmentCenter:
+            return @"Center";
+            break;
+        case NSTextAlignmentRight:
+            return @"Right";
+            break;
+        case NSTextAlignmentJustified:
+            return @"Justified";
+            break;
+        case NSTextAlignmentNatural:
+            return @"Natural";
+            break;
+    }
+}
+
+- (NSString *)lineBreakModeDescription:(NSLineBreakMode)lineBreakMode {
+    switch (lineBreakMode) {
+        case NSLineBreakByWordWrapping:
+            return @"ByWordWrapping";
+            break;
+        case NSLineBreakByCharWrapping:
+            return @"ByCharWrapping";
+            break;
+        case NSLineBreakByClipping:
+            return @"ByClipping";
+            break;
+        case NSLineBreakByTruncatingHead:
+            return @"ByTruncatingHead";
+            break;
+        case NSLineBreakByTruncatingTail:
+            return @"ByTruncatingTail";
+            break;
+        case NSLineBreakByTruncatingMiddle:
+            return @"ByTruncatingMiddle";
+            break;
+    }
 }
 
 @end
