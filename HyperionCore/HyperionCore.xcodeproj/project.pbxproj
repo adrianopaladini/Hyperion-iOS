@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C11F7BD20506ABB005A7081 /* HYPOverlayPluginModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C11F7BB20506ABB005A7081 /* HYPOverlayPluginModule.m */; };
 		1C11F7BE20506ABB005A7081 /* HYPOverlayPluginModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C11F7BC20506ABB005A7081 /* HYPOverlayPluginModule.h */; };
+		20345AB823FAEF3F00318184 /* HYPLayerAttributesProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 20345AB623FAEF3F00318184 /* HYPLayerAttributesProvider.h */; };
+		20345AB923FAEF3F00318184 /* HYPLayerAttributesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 20345AB723FAEF3F00318184 /* HYPLayerAttributesProvider.m */; };
 		204DD7C923F93F2A00A39822 /* HYPImageViewAttributesProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */; };
 		204DD7CA23F93F2A00A39822 /* HYPImageViewAttributesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */; };
 		32EA53471F27DA300012DFB6 /* HyperionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498E34741EFA0C8000A0BC4E /* HyperionCore.framework */; };
@@ -158,6 +160,8 @@
 /* Begin PBXFileReference section */
 		1C11F7BB20506ABB005A7081 /* HYPOverlayPluginModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPOverlayPluginModule.m; sourceTree = "<group>"; };
 		1C11F7BC20506ABB005A7081 /* HYPOverlayPluginModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPOverlayPluginModule.h; sourceTree = "<group>"; };
+		20345AB623FAEF3F00318184 /* HYPLayerAttributesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPLayerAttributesProvider.h; sourceTree = "<group>"; };
+		20345AB723FAEF3F00318184 /* HYPLayerAttributesProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPLayerAttributesProvider.m; sourceTree = "<group>"; };
 		204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYPImageViewAttributesProvider.h; sourceTree = "<group>"; };
 		204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYPImageViewAttributesProvider.m; sourceTree = "<group>"; };
 		320E5D6A1F27988500C42FC0 /* Measurements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Measurements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,14 +376,16 @@
 		493044CD1FD0B80800731401 /* AttributeProviders */ = {
 			isa = PBXGroup;
 			children = (
-				493044CE1FD0B85500731401 /* HYPAttributesProvider.h */,
-				493044CF1FD0B85500731401 /* HYPAttributesProvider.m */,
-				49CFFF721FD0D5A600B9E33A /* HYPLabelAttributesProvider.h */,
-				49CFFF731FD0D5A600B9E33A /* HYPLabelAttributesProvider.m */,
-				204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */,
-				204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */,
 				49CD4DEE1FD11AEE004769CF /* HYPAttributedStringAttributeProvider.h */,
 				49CD4DEF1FD11AEE004769CF /* HYPAttributedStringAttributeProvider.m */,
+				493044CE1FD0B85500731401 /* HYPAttributesProvider.h */,
+				493044CF1FD0B85500731401 /* HYPAttributesProvider.m */,
+				204DD7C723F93F2A00A39822 /* HYPImageViewAttributesProvider.h */,
+				204DD7C823F93F2A00A39822 /* HYPImageViewAttributesProvider.m */,
+				49CFFF721FD0D5A600B9E33A /* HYPLabelAttributesProvider.h */,
+				49CFFF731FD0D5A600B9E33A /* HYPLabelAttributesProvider.m */,
+				20345AB623FAEF3F00318184 /* HYPLayerAttributesProvider.h */,
+				20345AB723FAEF3F00318184 /* HYPLayerAttributesProvider.m */,
 			);
 			path = AttributeProviders;
 			sourceTree = "<group>";
@@ -758,6 +764,7 @@
 				49CD4DF01FD11AEE004769CF /* HYPAttributedStringAttributeProvider.h in Headers */,
 				49CD4DE61FD10F0F004769CF /* HYPKeyValueInspectorAttribute.h in Headers */,
 				32EA53791F27E1220012DFB6 /* HYPAttributesInspectorPluginModule.h in Headers */,
+				20345AB823FAEF3F00318184 /* HYPLayerAttributesProvider.h in Headers */,
 				32EA53751F27E1220012DFB6 /* HYPAttributeInspectorInteractionView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1023,6 +1030,7 @@
 			files = (
 				49CD4DE71FD10F0F004769CF /* HYPKeyValueInspectorAttribute.m in Sources */,
 				32EA536A1F27E11C0012DFB6 /* HYPAttributesPreviewViewController.m in Sources */,
+				20345AB923FAEF3F00318184 /* HYPLayerAttributesProvider.m in Sources */,
 				32EA537A1F27E1220012DFB6 /* HYPAttributesInspectorPluginModule.m in Sources */,
 				49CFFF751FD0D5A600B9E33A /* HYPLabelAttributesProvider.m in Sources */,
 				49CFFF6F1FD0CCE300B9E33A /* HYPTextPreview.m in Sources */,
