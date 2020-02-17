@@ -33,11 +33,15 @@
         HYPKeyValueInspectorAttribute *imageSizeAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Image Size" value:imageSizeValue];
         [viewAttributes addObject:imageSizeAttribute];
 
-        HYPKeyValueInspectorAttribute *imageScaleAttrubute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Scale" value:[NSString stringWithFormat:@"%.1f", imageView.image.scale]];
-        [viewAttributes addObject:imageScaleAttrubute];
+        HYPKeyValueInspectorAttribute *imageScaleAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Scale" value:[NSString stringWithFormat:@"%.1f", imageView.image.scale]];
+        [viewAttributes addObject:imageScaleAttribute];
 
-        HYPKeyValueInspectorAttribute *renderingModeAttrubute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Rendering mode" value:[self renderingModeDescription:imageView.image]];
-        [viewAttributes addObject:renderingModeAttrubute];
+        HYPKeyValueInspectorAttribute *renderingModeAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"Rendering Mode" value:[self renderingModeDescription:imageView.image]];
+        [viewAttributes addObject:renderingModeAttribute];
+
+        unsigned long pngImageLength = UIImagePNGRepresentation(imageView.image).length;
+        HYPKeyValueInspectorAttribute *imageDataSizeAttribute = [[HYPKeyValueInspectorAttribute alloc] initWithKey:@"PNG Representation Size" value:[NSString stringWithFormat:@"%lu bytes ~ %lu KB", pngImageLength, pngImageLength / 1024]];
+        [viewAttributes addObject:imageDataSizeAttribute];
     }
 
     return viewAttributes;
