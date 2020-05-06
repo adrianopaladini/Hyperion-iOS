@@ -35,9 +35,15 @@
         {
             [potentialSelectionViews addObjectsFromArray:[self findSubviewsInView:subView intersectingPoint:point]];
 
-            if ([self view:subView surrondsPoint:point] && ![blackList containsObject:NSStringFromClass([subView class])])
+            if ([self view:subView surrondsPoint:point])
             {
-                [potentialSelectionViews addObject:subView];
+                if (subView.accessibilityValue.lowercaseString != @"_uiblacklisted")
+                {
+                    if (![blackList containsObject:NSStringFromClass([subView class])])
+                    {
+                        [potentialSelectionViews addObject:subView];
+                    }
+                }
             }
         }
     }
