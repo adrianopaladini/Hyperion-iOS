@@ -37,7 +37,7 @@
 
             if ([self view:subView surrondsPoint:point])
             {
-                if (subView.accessibilityValue.lowercaseString != @"_uiblacklisted")
+                if (![[subView accessibilityValue].lowercaseString isEqualToString:@"_uiblacklisted"])
                 {
                     if (![blackList containsObject:NSStringFromClass([subView class])])
                     {
